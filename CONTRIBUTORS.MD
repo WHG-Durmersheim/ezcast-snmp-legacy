@@ -6,6 +6,6 @@ In this file, all authors of the Software a listed. This includes all contributo
   * Backend
   * SNMP-Handling
   * Documentation
-* Dominik [GitHub](https://github.com/Domi04151309) [Website](https://domi04151309.github.io/):
+* Dominik Reichl [GitHub](https://github.com/Domi04151309) [Website](https://domi04151309.github.io/):
   * Frontend
   * Design
