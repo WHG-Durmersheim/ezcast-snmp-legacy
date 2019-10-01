@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title><?php if(isset($TPL->PageTitle)) { echo $TPL->PageTitle; echo ' - '; } ?>EZCast</title>
+  <title>EZCast <?php if(isset($TPL->PageTitle)) { echo ' | '; echo $TPL->PageTitle; } ?></title>
   <link rel="stylesheet" type="text/css" href="/css/main.min.css" />
   <meta name="theme-color" content="#fff">
   <link rel="icon" href="/favicon.ico">
@@ -15,7 +15,7 @@
 <body>
   <header>
       <button id="menuBtn" type="button" onclick="openMenu()">Men&uuml;</button>
-      <h1>EZCast</h1>
+      <h1>EZCast <?php if(isset($TPL->PageTitle)) { echo ' | '; echo $TPL->PageTitle; } ?></h1>
   </header>
   <div id="nav-bg"></div>
   <nav>
