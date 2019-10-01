@@ -16,7 +16,7 @@
     "management",
     "deployment"
   ],
-  "author": "Schülermedienmentoren@WHG-Durmersheim (see AUTHORS.MD)",
+  "author": "See CONTRIBUTORS.MD",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/whg-durmersheim/ezcast-snmp/issues"
