@@ -1,6 +1,6 @@
 # Contributors
 ## Introduction
-In this file, all authors of the Software a listed. This includes all contributors and their accomplishments for this project.
+In this file, all authors of the Software are listed. This includes all contributors and their accomplishments for this project.
 ## Contributors
 * Niklas Arnitz [GitHub](https://github.com/niklasarnitz) [Website](https://niklasarnitz.com):
   * Backend
