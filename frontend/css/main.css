@@ -1,7 +1,9 @@
 :root {
-  --accent-color: #4285f4;
-  --accent-color-dark: #2467D6;
-  --secondary-text-color: #767676;
+  --accent-color: #061C4B;
+  --accent-color-dark: #041438;
+  --text-color: #212121;
+  --text-color-inverted: #fff;
+  --secondary-text-color: #666666;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -31,7 +33,7 @@ header {
   top: 0;
   height: 56px;
   width: 100%;
-  background: #fff;
+  background: var(--accent-color);
   overflow: hidden;
   box-shadow: 0 0 8px rgba(0,0,0,.5);
   z-index: 50;
@@ -63,6 +65,7 @@ nav {
   height: 100%;
   width: 280px;
   background: #fff;
+  color: var(--text-color);
   box-shadow: 0 0 8px rgba(0,0,0,.2);
   z-index: 100;
 }
@@ -72,31 +75,54 @@ nav {
 nav.nav-open {
   transform: translate3d(280px, 0px, 0px)
 }
+.dashboard {
+  background: rgba(0, 0, 0, 0) url(../images/ic_dashboard.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.settings {
+  background: rgba(0, 0, 0, 0) url(../images/ic_settings.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.edit {
+  background: rgba(0, 0, 0, 0) url(../images/ic_edit.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.nav-icon {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin: 16px 16px 16px 0;
+  padding: 0;
+}
 .nav-link {
-  display: block;
+  display: flex;
   height: 48px;
   width: 280px;
   line-height: 48px;
   padding: 0 16px 0;
   text-decoration: none;
-  color: #000;
+  color: inherit;
 }
 .nav-link:hover {
   background: rgba(0,0,0,.1);
 }
 h1, h2, h3 {
-  color: #000;
+  color: var(--text-color);
   font-weight: normal;
   font-size: 1.17em;
 }
 h1 {
-  height:100%;
+  color: var(--text-color-inverted);
+  height: 56px;
   display: inline-block;
   line-height: 56px;
   margin: 0;
 }
 h2 {
   margin: 1.68em 0 .42em;
+}
+.h2-card {
+  margin: 1.68em 12px .42em;
 }
 h3 {
   margin: .42em 0 .42em;
@@ -130,7 +156,7 @@ button {
   font-size: 14px;
   text-align: center;
   background: var(--accent-color);
-  color: #fff;
+  color: var(--text-color-inverted);
   cursor: pointer;
 }
 button:hover {
@@ -156,19 +182,25 @@ input[type=text]:focus {
   }
 }
 @media only screen and (min-width: 768px) {
-  #menuBtn {
+  header, #nav-bg.nav-open {
     display: none;
   }
   nav {
-    top: 56px;
     left: 0;
-    z-index: 10;
+    color: var(--text-color-inverted);
+    background: var(--accent-color);
   }
-  h1 {
-    padding: 0 16px 0;
+  nav.nav-open {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  .nav-icon {
+    filter: invert(100%);
+  }
+  .nav-link:hover {
+    background: rgba(255,255,255,.1);
   }
   #main {
     padding: 16px;
-    margin: 56px 0 0 280px;
+    margin: 0 0 0 280px;
   }
 }

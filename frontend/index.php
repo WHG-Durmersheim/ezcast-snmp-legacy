@@ -8,6 +8,7 @@ if (!isset($TPL)) {
   exit;
 }
 ?>
+<h2 class="h2-card">Dashboard</h2>
 <section class="card">
   <h3>Card</h3>
   <p>

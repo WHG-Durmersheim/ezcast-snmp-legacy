@@ -15,15 +15,15 @@
 <body>
   <header>
       <button id="menuBtn" type="button" onclick="openMenu()">Men&uuml;</button>
-      <h1>EZCast <?php if(isset($TPL->PageTitle)) { echo ' | '; echo $TPL->PageTitle; } ?></h1>
+      <h1>EZCast Management</h1>
   </header>
   <div id="nav-bg"></div>
   <nav>
-    <a class="nav-link" href="/">Dashboard</a>
-    <a class="nav-link" href="/">Lorem</a>
-    <a class="nav-link" href="/">Ipsum</a>
-    <a class="nav-link" href="/">Dolor</a>
-    <a class="nav-link" href="/">Sit</a>
+    <h1 class="nav-link">EZCast  Management</h1>
+    <a class="nav-link" href="/"><i class="dashboard nav-icon"></i>Dashboard</a>
+    <a class="nav-link" href="/"><i class="settings nav-icon"></i>Manage devices</a>
+    <a class="nav-link" href="/"><i class="edit nav-icon"></i>Edit shared configs</a>
+    <a class="nav-link" href="/"><i class="edit nav-icon"></i>Edit device list</a>
   </nav>
   <section id="main">
 
