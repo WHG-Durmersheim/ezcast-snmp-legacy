@@ -109,6 +109,12 @@ nav.nav-open {
   text-decoration: none;
   color: inherit;
 }
+.list-item-text {
+  display: block;
+  line-height: 20.8px;
+  margin: 13.6px 0;
+  color: inherit;
+}
 .nav-link {
   padding: 0 16px 0;
 }

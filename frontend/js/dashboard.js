@@ -6,7 +6,7 @@ getSharedConfigs();
 
 function onEZCastsLoaded(json) {
   for (let i = 0; i < json.length; i++) {
-    ezcastList.innerHTML += '<a class="list-item" href="/"><i class="device list-icon"></i>' + json[i].name + '</a>';
+    ezcastList.innerHTML += '<a class="list-item" href="/pages/device.php?id=' + json[i].id + '"><i class="device list-icon"></i>' + json[i].name + '</a>';
   }
 }
 
