@@ -12,3 +12,9 @@ async function getEZCasts() {
     console.log('Request failed', error);
   });
 }
+
+async function getSharedConfigs() {
+  //TODO
+  let text = '[{"name": "Example"}, {"name": "1st Floor"}, {"name": "2nd Floor"}]'
+  onSharedConfigsLoaded(JSON.parse(text));
+}
