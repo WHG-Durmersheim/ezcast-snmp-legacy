@@ -99,23 +99,6 @@ nav.nav-open {
   background: rgba(0, 0, 0, 0) url(../images/ic_config.svg) no-repeat;
   background-size: 100% 100%;
 }
-.delete {
-  position: absolute;
-  right: 0;
-  display: inline-block;
-  font-size: 0;
-  height: 16px;
-  width: 16px;
-  margin: 16px 0 16px 16px;
-  padding: 0;
-  background: rgba(0, 0, 0, 0) url(../images/ic_delete.svg) no-repeat;
-  background-size: 100% 100%;
-}
-.delete:hover {
-  background: rgba(0, 0, 0, 0) url(../images/ic_delete.svg) no-repeat;
-  background-size: 100% 100%;
-  animation: pop .3s;
-}
 .list-icon, .nav-icon {
   display: inline-block;
   height: 16px;
@@ -136,6 +119,35 @@ nav.nav-open {
   line-height: 20.8px;
   margin: 13.6px 0;
   color: inherit;
+}
+.edit, .delete {
+  position: absolute;
+  display: inline-block;
+  font-size: 0;
+  height: 16px;
+  width: 16px;
+  margin: 16px 0 16px 16px;
+  padding: 0;
+}
+.edit {
+  right: 48px;
+  background: rgba(0, 0, 0, 0) url(../images/ic_edit.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.delete {
+  right: 0;
+  background: rgba(0, 0, 0, 0) url(../images/ic_delete.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.edit:hover {
+  background: rgba(0, 0, 0, 0) url(../images/ic_edit.svg) no-repeat;
+  background-size: 100% 100%;
+  animation: pop .3s;
+}
+.delete:hover {
+  background: rgba(0, 0, 0, 0) url(../images/ic_delete.svg) no-repeat;
+  background-size: 100% 100%;
+  animation: pop .3s;
 }
 .nav-link {
   padding: 0 16px 0;
