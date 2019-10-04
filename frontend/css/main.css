@@ -87,23 +87,28 @@ nav.nav-open {
   background: rgba(0, 0, 0, 0) url(../images/ic_edit.svg) no-repeat;
   background-size: 100% 100%;
 }
-.nav-icon {
+.device {
+  background: rgba(0, 0, 0, 0) url(../images/ic_device.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.list-icon, .nav-icon {
   display: inline-block;
   height: 16px;
   width: 16px;
   margin: 16px 16px 16px 0;
   padding: 0;
 }
-.nav-link {
+.list-item, .nav-link {
   display: flex;
   height: 48px;
-  width: 280px;
   line-height: 48px;
-  padding: 0 16px 0;
   text-decoration: none;
   color: inherit;
 }
-.nav-link:hover {
+.nav-link {
+  padding: 0 16px 0;
+}
+.list-item:hover, .nav-link:hover {
   background: rgba(0,0,0,.1);
 }
 h1, h2, h3 {
@@ -129,6 +134,7 @@ h3 {
 }
 p {
   margin: .42em 0;
+  line-height: 1.3;
   color: var(--secondary-text-color);
 }
 #main {
@@ -175,6 +181,14 @@ input[type=text] {
 }
 input[type=text]:focus {
   border-bottom: 2px solid var(--accent-color);
+}
+#ezcastList {
+  color: var(--secondary-text-color);
+}
+.footer-text {
+  text-align: center;
+  text-decoration: none;
+  color: var(--secondary-text-color);
 }
 @media only screen and (min-width: 600px) {
   .card {

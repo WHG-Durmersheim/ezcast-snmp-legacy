@@ -29,6 +29,9 @@
 
 <?php if(isset($TPL->PageContent)) { include $TPL->PageContent; } ?>
 
+    <section class="footer-text">
+      <a href="https://icons8.com/" class="footer-text">Icons by Icons8</a>
+    </section>
   </section>
   <script src="/js/header.min.js" async></script>
 </body>
