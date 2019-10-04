@@ -61,8 +61,8 @@ header {
 nav {
   position: fixed;
   top: 0;
+  bottom: 0;
   left: -280px;
-  height: 100%;
   width: 280px;
   background: #fff;
   color: var(--text-color);
@@ -140,11 +140,16 @@ h1 {
 h2 {
   margin: 1.68em 0 .42em;
 }
-.h2-card {
-  margin: 1.68em 12px .42em;
+.card-margin {
+  margin-left: 12px;
+  margin-right: 12px;
 }
 h3 {
   margin: .42em 0 .42em;
+}
+#image-first {
+  width: 192px;
+  margin: 1.68em 0 .42em;
 }
 p, .list {
   margin: .42em 0;
@@ -197,9 +202,13 @@ input[type=text]:focus {
   border-bottom: 2px solid var(--accent-color);
 }
 .footer-text {
+  display: block;
+  position: absolute;
+  top: calc(100% - 20.8px);
+  width: 100%;
   text-align: center;
   text-decoration: none;
-  color: var(--secondary-text-color);
+  color: inherit;
 }
 @media only screen and (min-width: 600px) {
   .card {

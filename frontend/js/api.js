@@ -1,7 +1,20 @@
-const url = 'http://localhost:9000';
+const url = window.location.origin + ':9000/api/v1';
+
+checkBackend();
+
+async function checkBackend() {
+    fetch(url + '/status').then(function(response) {
+        return response.text();
+    }).then(function(text) {
+        var json = JSON.parse(text)
+        console.log('%cSuccessfully connected to backend!\n' + json.message + '\nVersion: ' + json.version, 'color: #88f;');
+    }).catch(function(error) {
+      location.href = '/pages/disconnected.php'
+    });
+}
 
 async function getEZCasts() {
-    fetch(url + '/api/v1/ezcasts').then(function(response) {
+    fetch(url + '/ezcasts').then(function(response) {
         return response.text();
     }).then(function(text) {
         onEZCastsLoaded(JSON.parse(text).ezcasts);

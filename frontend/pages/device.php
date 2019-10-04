@@ -8,7 +8,7 @@ if (!isset($TPL)) {
   exit;
 }
 ?>
-<h2 id="siteTitle" class="h2-card">Unknown Device</h2>
+<h2 id="siteTitle" class="card-margin">Unknown Device</h2>
 <section class="card">
   <h3>AirSetup (WiFi)</h3>
   <section class="list">

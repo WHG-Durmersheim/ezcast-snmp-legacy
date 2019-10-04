@@ -8,7 +8,7 @@ if (!isset($TPL)) {
   exit;
 }
 ?>
-<h2 class="h2-card">Dashboard</h2>
+<h2 class="card-margin">Dashboard</h2>
 <section class="card">
   <h3>EZCasts</h3>
   <section id="ezcastList" class="list"></section>
