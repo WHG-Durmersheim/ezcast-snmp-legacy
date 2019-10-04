@@ -38,6 +38,15 @@ app.get('/api/v1/ezcasts', (req, res) => {
 	})
 })
 
+// Get version of Backend
+app.get('/api/v1/status', (req, res) => {
+	res.status(200).send({
+		success: true,
+		message: 'No errors in backend detected.'
+		version: '0.0.1'
+	})
+})
+
 app.listen(port, () => {
 	console.log('Server is now running API and listening on port ' + port)
 })
