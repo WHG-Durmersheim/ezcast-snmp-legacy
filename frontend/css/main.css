@@ -79,12 +79,16 @@ nav.nav-open {
   background: rgba(0, 0, 0, 0) url(../images/ic_dashboard.svg) no-repeat;
   background-size: 100% 100%;
 }
-.settings {
-  background: rgba(0, 0, 0, 0) url(../images/ic_settings.svg) no-repeat;
+.devices {
+  background: rgba(0, 0, 0, 0) url(../images/ic_devices.svg) no-repeat;
   background-size: 100% 100%;
 }
-.edit {
-  background: rgba(0, 0, 0, 0) url(../images/ic_edit.svg) no-repeat;
+.configs {
+  background: rgba(0, 0, 0, 0) url(../images/ic_configs.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.about {
+  background: rgba(0, 0, 0, 0) url(../images/ic_about.svg) no-repeat;
   background-size: 100% 100%;
 }
 .device {
