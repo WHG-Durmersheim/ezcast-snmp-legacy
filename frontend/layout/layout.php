@@ -21,9 +21,9 @@
   <nav>
     <h1 class="nav-link">EZCast  Management</h1>
     <a class="nav-link" href="/"><i class="dashboard nav-icon"></i>Dashboard</a>
-    <a class="nav-link" href="/"><i class="devices nav-icon"></i>Manage devices</a>
-    <a class="nav-link" href="/"><i class="configs nav-icon"></i>Manage shared configs</a>
-    <a class="nav-link" href="/"><i class="about nav-icon"></i>About</a>
+    <a class="nav-link" href="/pages/devices.php"><i class="devices nav-icon"></i>Manage devices</a>
+    <a class="nav-link" href="/pages/configs.php"><i class="configs nav-icon"></i>Manage shared configs</a>
+    <a class="nav-link" href="/pages/about.php"><i class="about nav-icon"></i>About</a>
   </nav>
   <section id="main">
 
