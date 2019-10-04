@@ -30,6 +30,7 @@ const port = 9000
 
 // Get all EZCasts (Currently Dummy data)
 app.get('/api/v1/ezcasts', (req, res) => {
+	res.setHeader('Access-Control-Allow-Origin', '*')
 	res.status(200).send({
 		success: 'true',
 		message: 'ezcasts retrieved successfully',
