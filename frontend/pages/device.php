@@ -86,4 +86,4 @@ if (!isset($TPL)) {
   </section>
 </section>
 <script src="/js/api.js"></script>
-<script><?php include ($_SERVER['DOCUMENT_ROOT']).'/js/device.js'; ?></script>
+<script><?php include ($_SERVER['DOCUMENT_ROOT']).'/js/device.min.js'; ?></script>

@@ -18,4 +18,4 @@ if (!isset($TPL)) {
   <section id="configList" class="list"></section>
 </section>
 <script src="/js/api.js"></script>
-<script><?php include ($_SERVER['DOCUMENT_ROOT']).'/js/dashboard.js'; ?></script>
+<script><?php include ($_SERVER['DOCUMENT_ROOT']).'/js/dashboard.min.js'; ?></script>
