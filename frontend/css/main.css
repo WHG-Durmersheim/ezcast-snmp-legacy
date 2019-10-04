@@ -1,6 +1,6 @@
 :root {
   --accent-color: #061C4B;
-  --accent-color-dark: #041438;
+  --accent-color-light: #1E325C;
   --text-color: #212121;
   --text-color-inverted: #fff;
   --secondary-text-color: #666666;
@@ -152,7 +152,7 @@ nav.nav-open {
 .nav-link {
   padding: 0 16px 0;
 }
-a.list-item:hover, .nav-link:hover {
+a.list-item:hover, a.nav-link:hover {
   background: rgba(0,0,0,.1);
 }
 h1, h2, h3 {
@@ -215,7 +215,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background: var(--accent-color-dark);
+  background: var(--accent-color-light);
 }
 input[type=text] {
   padding: 6px 3px;
@@ -240,6 +240,9 @@ input[type=text]:focus {
   text-decoration: none;
   color: inherit;
 }
+.footer-text:hover {
+  animation: pop .3s;
+}
 @media only screen and (min-width: 600px) {
   .card {
     width: calc(50% - 32px);
@@ -260,7 +263,7 @@ input[type=text]:focus {
   .nav-icon {
     filter: invert(100%);
   }
-  .nav-link:hover {
+  a.nav-link:hover {
     background: rgba(255,255,255,.1);
   }
   #main {
