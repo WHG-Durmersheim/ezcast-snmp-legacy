@@ -9,16 +9,18 @@ if (!isset($TPL)) {
 }
 ?>
 <h2 class="card-margin">Dashboard</h2>
-<section class="card">
-  <h3>EZCasts</h3>
-  <section id="ezcastList" class="list">
-    <span class="list-item"><i class="device list-icon"></i>Loading...</span>
+<section class="small grid">
+  <section class="card">
+    <h3>EZCasts</h3>
+    <section id="ezcastList" class="list">
+      <span class="list-item"><i class="device list-icon"></i>Loading...</span>
+    </section>
   </section>
-</section>
-<section class="card">
-  <h3>Shared Configs</h3>
-  <section id="configList" class="list">
-    <span class="list-item"><i class="config list-icon"></i>Loading...</span>
+  <section class="card">
+    <h3>Shared Configs</h3>
+    <section id="configList" class="list">
+      <span class="list-item"><i class="config list-icon"></i>Loading...</span>
+    </section>
   </section>
 </section>
 <script src="/js/api.js"></script>
