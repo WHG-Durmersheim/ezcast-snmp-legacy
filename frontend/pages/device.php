@@ -13,7 +13,7 @@ if (!isset($TPL)) {
   <section class="card">
     <h3>AirSetup (WiFi)</h3>
     <section class="list">
-      <div class="list-item-text">WiFi-Password:   <text id="">undefined</text></div>
+      <div class="list-item-text">WiFi-Password: <text id="">undefined</text></div>
       <div class="list-item-text">Hide SSID: <text id="">undefined</text></div>
       <div class="list-item-text">Streaming Settings: <text id="">undefined</text></div>
     </section>
