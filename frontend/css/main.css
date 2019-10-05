@@ -1,6 +1,6 @@
 :root {
   --accent-color: #061C4B;
-  --accent-color-dark: #041438;
+  --accent-color-light: #1E325C;
   --text-color: #212121;
   --text-color-inverted: #fff;
   --secondary-text-color: #666666;
@@ -61,8 +61,8 @@ header {
 nav {
   position: fixed;
   top: 0;
+  bottom: 0;
   left: -280px;
-  height: 100%;
   width: 280px;
   background: #fff;
   color: var(--text-color);
@@ -108,6 +108,7 @@ nav.nav-open {
 }
 .list-item, .nav-link {
   display: flex;
+  position: relative;
   height: 48px;
   line-height: 48px;
   text-decoration: none;
@@ -119,10 +120,39 @@ nav.nav-open {
   margin: 13.6px 0;
   color: inherit;
 }
+.edit, .delete {
+  position: absolute;
+  display: inline-block;
+  font-size: 0;
+  height: 16px;
+  width: 16px;
+  margin: 16px 0 16px 16px;
+  padding: 0;
+}
+.edit {
+  right: 48px;
+  background: rgba(0, 0, 0, 0) url(../images/ic_edit.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.delete {
+  right: 0;
+  background: rgba(0, 0, 0, 0) url(../images/ic_delete.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.edit:hover {
+  background: rgba(0, 0, 0, 0) url(../images/ic_edit.svg) no-repeat;
+  background-size: 100% 100%;
+  animation: pop .3s;
+}
+.delete:hover {
+  background: rgba(0, 0, 0, 0) url(../images/ic_delete.svg) no-repeat;
+  background-size: 100% 100%;
+  animation: pop .3s;
+}
 .nav-link {
   padding: 0 16px 0;
 }
-.list-item:hover, .nav-link:hover {
+a.list-item:hover, a.nav-link:hover {
   background: rgba(0,0,0,.1);
 }
 h1, h2, h3 {
@@ -140,11 +170,16 @@ h1 {
 h2 {
   margin: 1.68em 0 .42em;
 }
-.h2-card {
-  margin: 1.68em 12px .42em;
+.card-margin {
+  margin-left: 12px;
+  margin-right: 12px;
 }
 h3 {
   margin: .42em 0 .42em;
+}
+#image-first {
+  width: 192px;
+  margin: 1.68em 0 .42em;
 }
 p, .list {
   margin: .42em 0;
@@ -180,14 +215,14 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background: var(--accent-color-dark);
+  background: var(--accent-color-light);
 }
 input[type=text] {
   padding: 6px 3px;
-  margin: 12px 0;
-  width: 20em;
+  margin: 0;
+  width: 16em;
   height: 32px;
-  max-width: calc(100% - 112px);
+  max-width: 100%;
   border: 0;
   border-bottom: 2px solid var(--secondary-text-color);
   outline: 0;
@@ -197,9 +232,16 @@ input[type=text]:focus {
   border-bottom: 2px solid var(--accent-color);
 }
 .footer-text {
+  display: block;
+  position: absolute;
+  top: calc(100% - 20.8px);
+  width: 100%;
   text-align: center;
   text-decoration: none;
-  color: var(--secondary-text-color);
+  color: inherit;
+}
+.footer-text:hover {
+  animation: pop .3s;
 }
 @media only screen and (min-width: 600px) {
   .card {
@@ -221,11 +263,16 @@ input[type=text]:focus {
   .nav-icon {
     filter: invert(100%);
   }
-  .nav-link:hover {
+  a.nav-link:hover {
     background: rgba(255,255,255,.1);
   }
   #main {
     padding: 16px;
     margin: 0 0 0 280px;
+  }
+}
+@keyframes pop {
+  50% {
+    transform:translateY(-50%);
   }
 }
