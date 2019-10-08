@@ -58,7 +58,7 @@ exports.create = (req, res) => {
   }
 
   // Create a EZCast
-  const ezcast = new EZcast({
+  const ezcast = new EZCast({
     name: req.body.name,
     room: req.body.room,
     wifiPassword: req.body.wifiPassword,
@@ -94,7 +94,7 @@ exports.create = (req, res) => {
 
 // Retrieve and return all ezcasts from the database.
 exports.findAll = (req, res) => {
-  EZcast.find()
+  EZCast.find()
     .then(ezcasts => {
       res.send(ezcasts);
     }).catch(err => {
@@ -110,7 +110,7 @@ exports.findOne = (req, res) => {
     .then(ezcast => {
       if (!ezcast) {
         return res.status(404).send({
-          message: "EZcast not found with id " + req.params.ezcastId
+          message: "EZCast not found with id " + req.params.ezcastId
         });
       }
       res.send(ezcast);
