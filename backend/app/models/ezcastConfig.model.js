@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const ezcastConfigSchema = mongoose.Schema({
 	id: Number,
+	configName: String,
 	name: String,
-	room: String,
 	wifiPassword: String,
 	hideSSID: Boolean,
 	streamingSettings: Boolean,
@@ -14,7 +14,7 @@ const ezcastConfigSchema = mongoose.Schema({
 	internetAccessControl: Number,
 	hidePassword: Boolean,
 	routerOrDirectOnly: Number,
-	otaURL: String,
+	otaURL: String
 })
 
 module.exports = mongoose.model('ezcastConfig', ezcastSchema);
