@@ -4,17 +4,17 @@ module.exports = (app) => {
     const configs = require('../controllers/config.controller.js');
 
     // Create a new Config
-    app.post('/configs', configs.create);
+    app.post('/api/v1/configs', configs.create);
 
     // Retrieve all configs
-    app.get('/configs', configs.findAll);
+    app.get('/api/v1/configs', configs.findAll);
 
     // Retrieve a single Config with configId
-    app.get('/configs/:configId', configs.findOne);
+    app.get('/api/v1/configs/:configId', configs.findOne);
 
     // Update a Config with configId
-    app.put('/configs/:configId', configs.update);
+    app.put('/api/v1/configs/:configId', configs.update);
 
     // Delete a Config with configId
-    app.delete('/configs/:configId', configs.delete);
+    app.delete('/api/v1/configs/:configId', configs.delete);
 }
