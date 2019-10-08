@@ -15,6 +15,7 @@ const ezcastSchema = mongoose.Schema({
 	hidePassword: Boolean,
 	routerOrDirectOnly: Number,
 	otaURL: String,
+	mainIP: String,
 	wlan0MAC: String,
 	wlan0IP: String,
 	wlan0status: String,
@@ -33,9 +34,9 @@ const ezcastSchema = mongoose.Schema({
 	firmwareVersion: String,
 	latestVersionAvailable: String,
 	numberOfLoggedInUsers: Number,
-	internetConnectionStatus: Boolean
-}, {
-	timestamps: false
+	internetConnectionStatus: Boolean,
+	isReachable: Boolean,
+	needsConfigUpdate: Boolean
 })
 
 module.exports = mongoose.model('ezcast', ezcastSchema);
