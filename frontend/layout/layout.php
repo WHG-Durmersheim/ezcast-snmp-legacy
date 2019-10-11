@@ -26,11 +26,11 @@
     <a class="nav-link" href="/pages/about.php"><i class="about nav-icon"></i>About</a>
     <a class="footer-text" href="https://icons8.com/">Icons by Icons8</a>
   </nav>
-  <section id="main" role="main">
+  <main>
 
 <?php if(isset($TPL->PageContent)) { include $TPL->PageContent; } ?>
 
-  </section>
+  </main>
   <script src="/js/header.min.js" async></script>
 </body>
 </html>

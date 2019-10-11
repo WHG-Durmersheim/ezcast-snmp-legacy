@@ -20,7 +20,7 @@ if (!isset($TPL)) {
     <h3>Add Device</h3>
     <p>
       Address:
-      <input type="text" id="urlInput" placeholder="http://127.0.0.1"></input>
+      <input type="text" aria-label="Address" id="urlInput" placeholder="http://127.0.0.1"></input>
       <br><br>
       <button onclick="" type="button">Add</button>
     </p>

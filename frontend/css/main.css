@@ -196,7 +196,7 @@ a.list-item:hover, a.nav-link:hover {
 /*
  * Layout
  */
- #main {
+ main {
    padding: 16px;
    margin: 56px auto 0;
  }
@@ -320,7 +320,7 @@ a.list-item:hover, a.nav-link:hover {
   a.nav-link:hover {
     background: rgba(255,255,255,.1);
   }
-  #main {
+  main {
     padding: 16px;
     margin: 0 0 0 280px;
   }
