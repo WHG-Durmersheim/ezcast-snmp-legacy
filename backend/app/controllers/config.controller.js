@@ -1,5 +1,4 @@
 const Config = require('../models/config.model.js');
-const EZCast = require('../models/ezcast.model.js');
 
 // Create and Save a new Config
 exports.create = (req, res) => {
