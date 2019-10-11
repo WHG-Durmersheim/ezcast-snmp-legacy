@@ -196,9 +196,10 @@ a.list-item:hover, a.nav-link:hover {
 /*
  * Layout
  */
- #main {
+ main {
    padding: 16px;
    margin: 56px auto 0;
+   animation: fadeIn .8s;
  }
  .card-margin {
    margin-left: 12px;
@@ -320,7 +321,7 @@ a.list-item:hover, a.nav-link:hover {
   a.nav-link:hover {
     background: rgba(255,255,255,.1);
   }
-  #main {
+  main {
     padding: 16px;
     margin: 0 0 0 280px;
   }
@@ -331,6 +332,12 @@ a.list-item:hover, a.nav-link:hover {
  */
 @keyframes pop {
   50% {
-    transform:translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    transform: translateY(+25px);
   }
 }

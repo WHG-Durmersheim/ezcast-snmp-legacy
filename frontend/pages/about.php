@@ -13,9 +13,10 @@ if (!isset($TPL)) {
   <h3>About</h3>
   <p>
     A responsive web interface for deploying, managing and maintaining multiple EZCast Pro II Sticks.<br>
-    This website was originally developed for the WHG-Durmersheim.
+    This website was originally developed for the WHG-Durmersheim and licensed under the terms and conditions of the MIT license.
     <br><br>
     <button onclick="location.href='https://github.com/WHG-Durmersheim/ezcast-snmp'" type="button">Repository</button>
+    <button onclick="location.href='https://github.com/WHG-Durmersheim/ezcast-snmp/blob/master/LICENSE'" type="button">License</button>
     <button onclick="location.href='https://github.com/WHG-Durmersheim/ezcast-snmp/blob/master/CONTRIBUTORS.MD'" type="button">Contributors</button>
   </p>
 </section>

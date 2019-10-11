@@ -19,18 +19,18 @@
   </header>
   <div id="nav-bg"></div>
   <nav>
-    <h1 class="nav-link">EZCast  Management</h1>
+    <h1 class="nav-link">EZCast Management</h1>
     <a class="nav-link" href="/"><i class="dashboard nav-icon"></i>Dashboard</a>
     <a class="nav-link" href="/pages/devices.php"><i class="devices nav-icon"></i>Manage devices</a>
     <a class="nav-link" href="/pages/configs.php"><i class="configs nav-icon"></i>Manage shared configs</a>
     <a class="nav-link" href="/pages/about.php"><i class="about nav-icon"></i>About</a>
     <a class="footer-text" href="https://icons8.com/">Icons by Icons8</a>
   </nav>
-  <section id="main" role="main">
+  <main>
 
 <?php if(isset($TPL->PageContent)) { include $TPL->PageContent; } ?>
 
-  </section>
+  </main>
   <script src="/js/header.min.js" async></script>
 </body>
 </html>
