@@ -54,7 +54,7 @@ exports.create = (req, res) => {
   }
 
   // Create a Config
-  const config = new EZCast({
+  const config = new Config({
     configName: req.body.configName,
     wifiPassword: req.body.wifiPassword,
     hideSSID: req.body.hideSSID,
@@ -82,7 +82,7 @@ exports.create = (req, res) => {
 
 // Retrieve and return all configs from the database.
 exports.findAll = (req, res) => {
-  EZCast.find()
+  Config.find()
     .then(configs => {
       res.send(configs);
     }).catch(err => {
@@ -98,7 +98,7 @@ exports.findOne = (req, res) => {
     .then(config => {
       if (!config) {
         return res.status(404).send({
-          message: "EZCast not found with id " + req.params.configId
+          message: "Config not found with id " + req.params.configId
         });
       }
       res.send(config);
