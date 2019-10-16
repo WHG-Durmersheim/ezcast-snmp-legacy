@@ -1,4 +1,4 @@
-const EZCast = require('../models/ezcast.model.js');
+const EZcast = require('../models/ezcast.model.js');
 
 // Create and Save a new EZCast
 exports.create = (req, res) => {
