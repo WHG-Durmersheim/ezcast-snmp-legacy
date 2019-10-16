@@ -23,4 +23,4 @@ const ezcastSchema = mongoose.Schema({
 	needsConfigUpdate: Boolean
 })
 
-module.exports = mongoose.model('ezcast', ezcastSchema);
+module.exports = mongoose.model('EZcast', ezcastSchema);

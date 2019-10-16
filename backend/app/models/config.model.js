@@ -15,4 +15,4 @@ const configSchema = mongoose.Schema({
 	otaURL: String
 })
 
-module.exports = mongoose.model('config', configSchema);
+module.exports = mongoose.model('Config', configSchema);
