@@ -8,6 +8,10 @@ const app = express()
 // Set port the api should listen on
 const port = 9000
 
+// Configure app to use bodyParser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 // Add Routers
 require('./app/routes/configs.routes.js')(app);
 require('./app/routes/ezcasts.routes.js')(app);
