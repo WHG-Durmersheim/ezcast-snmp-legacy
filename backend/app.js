@@ -19,6 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Add Routers
+require('./app/routes/status.routes.js')(app);
 require('./app/routes/configs.routes.js')(app);
 require('./app/routes/ezcasts.routes.js')(app);
 require('./app/routes/users.routes.js')(app);
