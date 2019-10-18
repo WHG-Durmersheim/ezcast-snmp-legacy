@@ -7,50 +7,6 @@ exports.create = (req, res) => {
     return res.status(400).send({
       message: "EZCast name can not be empty"
     });
-  } else if (!req.body.room) {
-    return res.status(400).send({
-      message: "EZCast room can not be empty"
-    });
-  } else if (!req.body.wifiPassword) {
-    return res.status(400).send({
-      message: "EZCast wifiPassword can not be empty"
-    });
-  } else if (!req.body.hideSSID) {
-    return res.status(400).send({
-      message: "EZCast hideSSID can not be empty"
-    });
-  } else if (!req.body.streamingSettings) {
-    return res.status(400).send({
-      message: "EZCast streamingSettings can not be empty"
-    });
-  } else if (!req.body.deviceLanguage) {
-    return res.status(400).send({
-      message: "EZCast deviceLanguage can not be empty"
-    });
-  } else if (!req.body.outputResolution) {
-    return res.status(400).send({
-      message: "EZCast outputResolution can not be empty"
-    });
-  } else if (!req.body.maximumSimultaneousClients) {
-    return res.status(400).send({
-      message: "EZCast maximumSimultaneousClients can not be empty"
-    });
-  } else if (!req.body.castcodeSetting) {
-    return res.status(400).send({
-      message: "EZCast castcodeSetting can not be empty"
-    });
-  } else if (!req.body.internetAccessControl) {
-    return res.status(400).send({
-      message: "EZCast internetAccessControl can not be empty"
-    });
-  } else if (!req.body.hidePassword) {
-    return res.status(400).send({
-      message: "EZCast hidePassword can not be empty"
-    });
-  } else if (!req.body.routerOrDirectOnly) {
-    return res.status(400).send({
-      message: "EZCast routerOrDirectOnly can not be empty"
-    });
   } else if (!req.body.mainIP) {
     return res.status(400).send({
       message: "EZCast mainIP can not be empty"
@@ -60,25 +16,25 @@ exports.create = (req, res) => {
   // Create a EZCast
   const ezcast = new EZCast({
     name: req.body.name,
-    room: req.body.room,
-    wifiPassword: req.body.wifiPassword,
-    hideSSID: req.body.hideSSID,
-    streamingSettings: req.body.streamingSettings,
-    deviceLanguage: req.body.deviceLanguage,
-    outputResolution: req.body.outputResolution,
-    maximumSimultaneousClients: req.body.maximumSimultaneousClients,
-    castcodeSetting: req.body.castcodeSetting,
-    internetAccessControl: req.body.internetAccessControl,
-    hidePassword: req.body.hidePassword,
-    routerOrDirectOnly: req.body.routerOrDirectOnly,
-    otaURL: req.body.otaURL || "",
+    room: req.body.room || null,
+    wifiPassword: req.body.wifiPassword || null,
+    hideSSID: req.body.hideSSID || null,
+    streamingSettings: req.body.streamingSettings || null,
+    deviceLanguage: req.body.deviceLanguage || null,
+    outputResolution: req.body.outputResolution || null,
+    maximumSimultaneousClients: req.body.maximumSimultaneousClients || null,
+    castcodeSetting: req.body.castcodeSetting || null,
+    internetAccessControl: req.body.internetAccessControl || null,
+    hidePassword: req.body.hidePassword || null,
+    routerOrDirectOnly: req.body.routerOrDirectOnly || null,
+    otaURL: req.body.otaURL || null,
     mainIP: req.body.mainIP,
-    firmwareVersion: req.body.firmwareVersion || "",
-    latestVersionAvailable: req.body.latestVersionAvailable || "",
-    numberOfLoggedInUsers: req.body.numberOfLoggedInUsers || "",
-    internetConnectionStatus: req.body.internetConnectionStatus || true,
-    isReachable: req.body.isReachable || true,
-    needsConfigUpdate: req.body.needsConfigUpdate || true
+    firmwareVersion: req.body.firmwareVersion || null,
+    latestVersionAvailable: req.body.latestVersionAvailable || null,
+    numberOfLoggedInUsers: req.body.numberOfLoggedInUsers || null,
+    internetConnectionStatus: req.body.internetConnectionStatus || null,
+    isReachable: req.body.isReachable || null,
+    needsConfigUpdate: req.body.needsConfigUpdate || null
   });
 
   // Save EZCast
