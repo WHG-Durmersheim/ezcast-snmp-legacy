@@ -5,6 +5,12 @@ const bodyParser = require('body-parser')
 // Set up express app
 const app = express()
 
+// Configure cross origin
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 // Set port the api should listen on
 const port = 9000
 
