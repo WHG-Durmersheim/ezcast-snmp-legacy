@@ -6,7 +6,7 @@ getEZCasts();
 
 function onEZCastsLoaded(json) {
   for (var i = 0; i < json.length; i++) {
-    if(json[i].id == query) ezCast = json[i];
+    if(json[i]._id == query) ezCast = json[i];
   }
   siteTitle.innerHTML = ezCast.name;
 }

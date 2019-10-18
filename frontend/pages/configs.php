@@ -11,7 +11,7 @@ if (!isset($TPL)) {
 <h2 class="card-margin">Manage Shared Configs</h2>
 <section class="small grid">
   <section class="card">
-    <h3>EZCasts</h3>
+    <h3>Shared Configs</h3>
     <section id="configList" class="list">
       <span class="list-item"><i class="config list-icon"></i>Loading...</span>
     </section>

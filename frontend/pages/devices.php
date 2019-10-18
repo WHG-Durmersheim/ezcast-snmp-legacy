@@ -19,10 +19,13 @@ if (!isset($TPL)) {
   <section class="card">
     <h3>Add Device</h3>
     <p>
-      Address:
-      <input type="text" aria-label="Address" id="urlInput" placeholder="http://127.0.0.1"></input>
-      <br><br>
-      <button onclick="" type="button">Add</button>
+      Name:<br>
+      <input type="text" aria-label="Address" id="nameInput" placeholder="EZCast"></input><br>
+      <br>
+      Address:<br>
+      <input type="text" aria-label="Address" id="addressInput" placeholder="http://127.0.0.1"></input><br>
+      <br>
+      <button onclick="addEZCastFromForm()" type="button">Add</button>
     </p>
   </section>
 </section>
