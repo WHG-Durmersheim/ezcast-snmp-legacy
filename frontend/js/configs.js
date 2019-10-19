@@ -9,7 +9,9 @@ function onSharedConfigsLoaded(json) {
   } else {
     for (var i = 0; i < json.length; i++) {
       configList.innerHTML += '<span class="list-item"><i class="config list-icon"></i>'
-      + json[i].configName + '<button class="edit" onclick="" type="button">Edit</button><button class="delete" onclick="" type="button">Delete</button></span>';
+      + json[i].configName + '<button class="edit" onclick="location.href=\'/pages/config.php?id='
+      + json[i]._id + '\'" type="button">Edit</button><button class="delete" onclick="deleteSharedConfig(\''
+      + json[i]._id + '\')" type="button">Delete</button></span>';
     }
   }
 }

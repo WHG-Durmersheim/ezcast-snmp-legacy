@@ -21,7 +21,7 @@ if (!isset($TPL)) {
     <p>
       Create a new shared configs file that you can apply to multiple devices.
       <br><br>
-      <button onclick="" type="button">Create</button>
+      <button onclick="location.href='/pages/config.php'" type="button">Create</button>
     </p>
   </section>
 </section>

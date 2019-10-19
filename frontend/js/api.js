@@ -23,16 +23,6 @@ async function getEZCasts() {
     });
 }
 
-async function getSharedConfigs() {
-    fetch(url + '/configs').then(function(response) {
-        return response.text();
-    }).then(function(text) {
-        onSharedConfigsLoaded(JSON.parse(text));
-    }).catch(function(error) {
-        console.log('Request failed', error);
-    });
-}
-
 async function addEZCast(name, mainIP) {
     var bodyGenerator = '{"name":"' + name + '","mainIP":"' + mainIP + '"}'
     fetch(url + '/ezcasts', {
@@ -53,6 +43,50 @@ async function deleteEZCast(id) {
       method: 'DELETE'
     }).then(function() {
         getEZCasts();
+    }).catch(function(error) {
+        console.log('Request failed', error);
+    });
+}
+
+async function getSharedConfigs() {
+    fetch(url + '/configs').then(function(response) {
+        return response.text();
+    }).then(function(text) {
+        onSharedConfigsLoaded(JSON.parse(text));
+    }).catch(function(error) {
+        console.log('Request failed', error);
+    });
+}
+
+async function getSharedConfigById(id) {
+    fetch(url + '/configs/' + id).then(function(response) {
+        return response.text();
+    }).then(function(text) {
+        onSharedConfigLoaded(JSON.parse(text));
+    }).catch(function(error) {
+        console.log('Request failed', error);
+    });
+}
+
+async function addSharedConfig(json) {
+    fetch(url + '/configs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: json
+    }).then(function() {
+        onSharedConfigAdded()
+    }).catch(function(error) {
+        console.log('Request failed', error);
+    });
+}
+
+async function deleteSharedConfig(id) {
+    fetch(url + '/configs/' + id, {
+      method: 'DELETE'
+    }).then(function() {
+        getSharedConfigs();
     }).catch(function(error) {
         console.log('Request failed', error);
     });

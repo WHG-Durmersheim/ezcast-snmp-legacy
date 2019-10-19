@@ -21,7 +21,7 @@ function onSharedConfigsLoaded(json) {
     configList.innerHTML += '<span class="list-item"><i class="config list-icon"></i>No Shared Configs found</span>';
   } else {
     for (var i = 0; i < json.length; i++) {
-      configList.innerHTML += '<a class="list-item" href="/"><i class="config list-icon"></i>' + json[i].configName + '</a>';
+      configList.innerHTML += '<a class="list-item" href="/pages/config.php?id=' + json[i]._id + '"><i class="config list-icon"></i>' + json[i].configName + '</a>';
     }
   }
 }

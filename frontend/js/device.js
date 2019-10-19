@@ -1,4 +1,4 @@
-const query = getUrlParameter('id');
+const id = getUrlParameter('id');
 const siteTitle = document.getElementById('siteTitle');
 var ezCast;
 
@@ -6,7 +6,7 @@ getEZCasts();
 
 function onEZCastsLoaded(json) {
   for (var i = 0; i < json.length; i++) {
-    if(json[i]._id == query) ezCast = json[i];
+    if(json[i]._id == id) ezCast = json[i];
   }
   siteTitle.innerHTML = ezCast.name;
 }
