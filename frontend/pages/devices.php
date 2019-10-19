@@ -20,7 +20,7 @@ if (!isset($TPL)) {
     <h3>Add Device</h3>
     <p>
       Name:<br>
-      <input type="text" aria-label="Address" id="nameInput" placeholder="EZCast"></input><br>
+      <input type="text" aria-label="Address" id="nameInput" placeholder="New EZCast"></input><br>
       <br>
       Address:<br>
       <input type="text" aria-label="Address" id="addressInput" placeholder="http://127.0.0.1"></input><br>

@@ -23,6 +23,16 @@ async function getEZCasts() {
     });
 }
 
+async function getEZCastById(id) {
+    fetch(url + '/ezcasts/' + id).then(function(response) {
+        return response.text();
+    }).then(function(text) {
+        onEZCastLoaded(JSON.parse(text));
+    }).catch(function(error) {
+        console.log('Request failed', error);
+    });
+}
+
 async function addEZCast(name, mainIP) {
     var bodyGenerator = '{"name":"' + name + '","mainIP":"' + mainIP + '"}'
     fetch(url + '/ezcasts', {

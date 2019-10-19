@@ -1,14 +1,10 @@
 const id = getUrlParameter('id');
 const siteTitle = document.getElementById('siteTitle');
-var ezCast;
 
-getEZCasts();
+getEZCastById(id);
 
-function onEZCastsLoaded(json) {
-  for (var i = 0; i < json.length; i++) {
-    if(json[i]._id == id) ezCast = json[i];
-  }
-  siteTitle.innerHTML = ezCast.name;
+function onEZCastLoaded(json) {
+  siteTitle.innerHTML = json.name;
 }
 
 function getUrlParameter(name) {
