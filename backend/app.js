@@ -5,6 +5,14 @@ const bodyParser = require('body-parser')
 // Set up express app
 const app = express()
 
+// Configure cross origin
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    next();
+});
+
 // Set port the api should listen on
 const port = 9000
 
@@ -13,6 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Add Routers
+require('./app/routes/status.routes.js')(app);
 require('./app/routes/configs.routes.js')(app);
 require('./app/routes/ezcasts.routes.js')(app);
 require('./app/routes/users.routes.js')(app);
