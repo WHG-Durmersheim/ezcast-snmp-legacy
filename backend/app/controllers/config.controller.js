@@ -7,66 +7,22 @@ exports.create = (req, res) => {
     return res.status(400).send({
       message: "Config configName can not be empty"
     });
-  } else if (!req.body.room) {
-    return res.status(400).send({
-      message: "Config room can not be empty"
-    });
-  } else if (!req.body.wifiPassword) {
-    return res.status(400).send({
-      message: "Config wifiPassword can not be empty"
-    });
-  } else if (!req.body.hideSSID) {
-    return res.status(400).send({
-      message: "Config hideSSID can not be empty"
-    });
-  } else if (!req.body.streamingSettings) {
-    return res.status(400).send({
-      message: "Config streamingSettings can not be empty"
-    });
-  } else if (!req.body.deviceLanguage) {
-    return res.status(400).send({
-      message: "Config deviceLanguage can not be empty"
-    });
-  } else if (!req.body.outputResolution) {
-    return res.status(400).send({
-      message: "Config outputResolution can not be empty"
-    });
-  } else if (!req.body.maximumSimultaneousClients) {
-    return res.status(400).send({
-      message: "Config maximumSimultaneousClients can not be empty"
-    });
-  } else if (!req.body.castcodeSetting) {
-    return res.status(400).send({
-      message: "Config castcodeSetting can not be empty"
-    });
-  } else if (!req.body.internetAccessControl) {
-    return res.status(400).send({
-      message: "Config internetAccessControl can not be empty"
-    });
-  } else if (!req.body.hidePassword) {
-    return res.status(400).send({
-      message: "Config hidePassword can not be empty"
-    });
-  } else if (!req.body.routerOrDirectOnly) {
-    return res.status(400).send({
-      message: "Config routerOrDirectOnly can not be empty"
-    });
   }
 
   // Create a Config
   const config = new Config({
     configName: req.body.configName,
-    wifiPassword: req.body.wifiPassword,
-    hideSSID: req.body.hideSSID,
-    streamingSettings: req.body.streamingSettings,
-    deviceLanguage: req.body.deviceLanguage,
-    outputResolution: req.body.outputResolution,
-    maximumSimultaneousClients: req.body.maximumSimultaneousClients,
-    castcodeSetting: req.body.castcodeSetting,
-    internetAccessControl: req.body.internetAccessControl,
-    hidePassword: req.body.hidePassword || true,
-    routerOrDirectOnly: req.body.routerOrDirectOnly,
-    otaURL: req.body.otaURL || ""
+    wifiPassword: req.body.wifiPassword || null,
+    hideSSID: req.body.hideSSID || null,
+    streamingSettings: req.body.streamingSettings || null,
+    deviceLanguage: req.body.deviceLanguage || null,
+    outputResolution: req.body.outputResolution || null,
+    maximumSimultaneousClients: req.body.maximumSimultaneousClients || null,
+    castcodeSetting: req.body.castcodeSetting || null,
+    internetAccessControl: req.body.internetAccessControl || null,
+    hidePassword: req.body.hidePassword || null,
+    routerOrDirectOnly: req.body.routerOrDirectOnly || null,
+    otaURL: req.body.otaURL || null
   });
 
   // Save Config
